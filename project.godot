@@ -6,6 +6,7 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
+<<<<<<< Updated upstream
 config_version=4
 
 _global_script_classes=[ {
@@ -17,16 +18,30 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "GitAPI": ""
 }
+=======
+config_version=5
+>>>>>>> Stashed changes
 
 [application]
 
 config/name="lizard-walk"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
+
+[dotnet]
+
+project/assembly_name="lizard-walk"
 
 [editor]
 
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
 version_control_autoload_on_startup=true
 version_control_plugin_name="GitAPI"
+
+[filesystem]
+
+import/fbx/enabled=false
 
 [gui]
 
@@ -42,4 +57,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_environment="res://default_env.tres"

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1vlgy4xohyga"]
+
+[ext_resource type="PackedScene" uid="uid://b5j16bqhslr3q" path="res://asset-scenes/AnthroChar.tscn" id="1_vpql8"]
+[ext_resource type="Script" path="res://scripts/CameraController.gd" id="2_t0tsa"]
+
+[node name="AnthroCharController" type="Node3D"]
+
+[node name="Main Char v1" parent="." instance=ExtResource("1_vpql8")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
+
+[node name="CameraController" type="Node3D" parent="." groups=["CameraController"]]
+script = ExtResource("2_t0tsa")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraController"]
+collision_mask = 2
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraController/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60554, 3.19727)
+
+[node name="PlayerLookAt" type="Node3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.996769, -2.10599)

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwsv7slc7b4mb"]
+
+[ext_resource type="PackedScene" uid="uid://d1vlgy4xohyga" path="res://asset-scenes/AnthroCharController.tscn" id="1_47oxk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0pjlg"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_453b1"]
+sky_material = SubResource("ProceduralSkyMaterial_0pjlg")
+
+[sub_resource type="Environment" id="Environment_et8rm"]
+background_mode = 2
+sky = SubResource("Sky_453b1")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ge4xs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ei3ae"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_easvr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qpe00"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_et8rm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 2.21876, 0)
+shadow_enabled = true
+
+[node name="TestFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.305, 0, 0, 0, 0.1, 0, 0, 0, 8.305, 0, -0.162552, 0)
+mesh = SubResource("BoxMesh_ge4xs")
+skeleton = NodePath("../Main Char v1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TestFloor"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestFloor/StaticBody3D"]
+shape = SubResource("BoxShape3D_ei3ae")
+
+[node name="TestWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.38958, 0, 0, 0, 5.82679, -2.14623, 1.18928, 0)
+mesh = SubResource("BoxMesh_easvr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TestWall"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestWall/StaticBody3D"]
+shape = SubResource("BoxShape3D_qpe00")
+
+[node name="AnthroCharController" parent="." instance=ExtResource("1_47oxk")]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ric0j3p8lks"]
+
+[ext_resource type="PackedScene" uid="uid://ltxvr5rswa6a" path="res://meshes/feral-lizard.glb" id="1_ku0ks"]
+[ext_resource type="Script" path="res://asset-scenes/ik-start.gd" id="2_s2ilb"]
+
+[node name="feral-lizard" instance=ExtResource("1_ku0ks")]
+
+[node name="leg-ul-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="1"]
+process_priority = 1
+root_bone = &"leg-ul-thigh"
+tip_bone = &"leg-ul-foot"
+use_magnet = true
+magnet = Vector3(0, 5, 0)
+target_node = NodePath("../../../leg-ul-target")
+script = ExtResource("2_s2ilb")
+
+[node name="leg-ur-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="2"]
+process_priority = 1
+root_bone = &"leg-ur-thigh"
+tip_bone = &"leg-ur-foot"
+use_magnet = true
+magnet = Vector3(0, 5, 0)
+target_node = NodePath("../../../leg-ur-target")
+script = ExtResource("2_s2ilb")
+
+[node name="leg-ll-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="3"]
+process_priority = 1
+root_bone = &"leg-ll-thigh"
+tip_bone = &"leg-ll-foot"
+use_magnet = true
+magnet = Vector3(0, 5, 0)
+target_node = NodePath("../../../leg-ll-target")
+script = ExtResource("2_s2ilb")
+
+[node name="leg-lr-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="4"]
+process_priority = 1
+root_bone = &"leg-lr-thigh"
+tip_bone = &"leg-lr-foot"
+use_magnet = true
+magnet = Vector3(0, 5, 0)
+target_node = NodePath("../../../leg-lr-target")
+script = ExtResource("2_s2ilb")
+
+[node name="leg-ul-target" type="Marker3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.53479, -0.148052, -1.95462)
+top_level = true
+
+[node name="leg-ur-target" type="Marker3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.8456, -2)
+top_level = true
+
+[node name="leg-ll-target" type="Marker3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.8456, 2)
+top_level = true
+
+[node name="leg-lr-target" type="Marker3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.8456, 2)
+top_level = true

@@ -1,7 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://eqce7e80co3x"]
+[gd_scene load_steps=9 format=3 uid="uid://eqce7e80co3x"]
 
 [ext_resource type="PackedScene" uid="uid://d1vlgy4xohyga" path="res://asset-scenes/AnthroCharController.tscn" id="1_rp7qq"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_qy8do"]
+[ext_resource type="Resource" path="res://meshes/terrain/terrain1/data.hterrain" id="3_s5mv8"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_doprl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c34vc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ey73l"]
+sky_material = SubResource("ProceduralSkyMaterial_c34vc")
+
+[sub_resource type="Environment" id="Environment_hi2k1"]
+background_mode = 2
+sky = SubResource("Sky_ey73l")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Resource" id="Resource_dwfkc"]
+script = ExtResource("4_doprl")
+mode = 0
+textures = [[], []]
 
 [node name="MainScene" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hi2k1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="AnthroCharController" parent="." instance=ExtResource("1_rp7qq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.6762, 0)
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("2_qy8do")
+centered = true
+_terrain_data = ExtResource("3_s5mv8")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 3
+collision_mask = 3
+shader_type = "LowPoly"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_dwfkc")
+render_layers = 1
+cast_shadow = 1

@@ -28,6 +28,10 @@ version_control/autoload_on_startup=true
 version_control_autoload_on_startup=true
 version_control_plugin_name="GitAPI"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+
 [filesystem]
 
 import/fbx/enabled=false
@@ -77,5 +81,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+lights_and_shadows/directional_shadow/size=8192
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
 environment/defaults/default_environment="res://default_env.tres"
 environment/default_environment="res://default_env.tres"

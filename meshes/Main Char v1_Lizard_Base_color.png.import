@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c54hxxiiairyp"
+uid="uid://cvvxlp6cksbqf"
 path.s3tc="res://.godot/imported/Main Char v1_Lizard_Base_color.png-585c6b4181804b286a5e181246906e1d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

@@ -29,8 +29,9 @@ glow_enabled = true
 environment = SubResource("Environment_et8rm")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 2.21876, 0)
+transform = Transform3D(-0.169541, 0.711849, -0.681562, 0.041987, 0.696164, 0.716654, 0.984628, 0.0928852, -0.147916, 0, 3.94109, 0)
 shadow_enabled = true
+shadow_blur = 0.0
 
 [node name="TestFloor" type="MeshInstance3D" parent="."]
 transform = Transform3D(24.2518, 0, 0, 0, 0.1, 0, 0, 0, 24.2518, 0, -0.162552, 0)
@@ -67,7 +68,7 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_qpe00")
 
 [node name="TestWall3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.683898, 0, 0, 0, 5.82679, -3.38269, 1.69959, -2.99624)
+transform = Transform3D(1, 0, 0, 0, 0.683898, 0, 0, 0, 1.62734, -3.38269, 1.62375, -2.09751)
 mesh = SubResource("BoxMesh_easvr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestWall3"]

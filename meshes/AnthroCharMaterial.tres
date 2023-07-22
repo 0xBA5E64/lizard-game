@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c4kddnlojyu8a"]
+
+[ext_resource type="Shader" path="res://shaders/BOTWType.gdshader" id="1_bxmct"]
+[ext_resource type="Texture2D" uid="uid://cvvxlp6cksbqf" path="res://meshes/Main Char v1_Lizard_Base_color.png" id="2_vwx1r"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_bxmct")
+shader_parameter/tint = Color(0.807843, 0.807843, 0.807843, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/shadow_size = 0.47
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_extra_intensity = -0.235
+shader_parameter/shadow_color = Color(0.576471, 0.52549, 0.729412, 1)
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.9
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = false
+shader_parameter/animated = false
+shader_parameter/time_scale = 0.02
+shader_parameter/normal_bias = Vector3(0, 0, 0)
+shader_parameter/light_bias = Vector3(0, 0, 0)
+shader_parameter/use_view = false
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+shader_parameter/albedo_texture = ExtResource("2_vwx1r")

@@ -14,7 +14,7 @@ config_version=5
 
 config/name="lizard-walk"
 run/main_scene="res://game-scenes/TestScene.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [dotnet]

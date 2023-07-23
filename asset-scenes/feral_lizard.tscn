@@ -4,6 +4,106 @@
 [ext_resource type="Script" path="res://asset-scenes/ik-start.gd" id="2_s2ilb"]
 
 [node name="feral-lizard" instance=ExtResource("1_ku0ks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.524048, 0)
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845596, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+bones/1/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+bones/6/rest = Transform3D(1, 0, 0, 0, 0.999113, 0.0421083, 0, -0.0421083, 0.999113, 0, 1.72627, -1.49012e-08)
+bones/6/position = Vector3(0, 1.72627, -1.49012e-08)
+bones/6/rotation = Quaternion(-0.0210588, 0, 0, 0.999778)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rest = Transform3D(1, -1.05697e-19, 4.57504e-21, 1.05375e-19, 0.99894, 0.0460207, -9.43445e-21, -0.0460207, 0.99894, 7.00736e-17, 0.491654, -0.352487)
+bones/7/position = Vector3(7.00736e-17, 0.491654, -0.352487)
+bones/7/rotation = Quaternion(-0.0230165, 3.5033e-21, 5.27821e-20, 0.999735)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rest = Transform3D(0.0179546, 0.999839, 0, -0.999839, 0.0179546, 0, 0, 0, 1, 1.2, 1.1, 0)
+bones/8/rotation = Quaternion(0, 0, -0.70073, 0.713426)
+bones/11/rest = Transform3D(0.715042, -0.331041, 0.615733, 0.672437, 0.0848466, -0.735275, 0.191163, 0.939794, 0.283273, -0.178258, 0.483048, 0.386091)
+bones/11/position = Vector3(-0.178258, 0.483048, 0.386091)
+bones/11/rotation = Quaternion(0.580285, 0.147081, 0.347629, 0.721658)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/rest = Transform3D(0.287767, -0.938503, 0.190793, 0.729922, 0.0859551, -0.678105, 0.620004, 0.3344, 0.709769, -0.444297, 0.483048, 0.139451)
+bones/12/position = Vector3(-0.444297, 0.483048, 0.139451)
+bones/12/rotation = Quaternion(0.350729, -0.148677, 0.577937, 0.721715)
+bones/13/rest = Transform3D(-0.129995, -0.950021, -0.283831, 0.767679, 0.0847321, -0.635207, 0.62751, -0.300465, 0.718297, -0.43275, 0.483048, -0.165385)
+bones/13/position = Vector3(-0.43275, 0.483048, -0.165385)
+bones/13/rotation = Quaternion(0.129398, -0.352289, 0.663996, 0.646729)
+bones/13/scale = Vector3(0.999999, 0.999999, 0.999999)
+bones/14/rest = Transform3D(-0.510336, -0.347928, -0.78645, 0.817832, 0.086418, -0.568931, 0.26591, -0.93353, 0.240444, -0.166711, 0.483048, -0.394844)
+bones/14/position = Vector3(-0.166711, 0.483048, -0.394844)
+bones/14/rotation = Quaternion(-0.201744, -0.582303, 0.645051, 0.451809)
+bones/14/scale = Vector3(1, 1, 1)
+bones/16/rest = Transform3D(0.0179546, -0.999839, 0, 0.999839, 0.0179546, 0, 0, 0, 1, -1.2, 1.1, 0)
+bones/16/rotation = Quaternion(0, 0, 0.70073, 0.713426)
+bones/19/rest = Transform3D(-0.676994, 0.331041, -0.657336, -0.672437, 0.0848467, 0.735275, 0.299179, 0.939794, 0.165163, 0.178258, 0.483048, 0.386091)
+bones/19/position = Vector3(0.178258, 0.483048, 0.386091)
+bones/19/rotation = Quaternion(-0.135089, 0.631798, 0.662818, -0.378489)
+bones/19/scale = Vector3(1, 1, 0.999999)
+bones/20/rest = Transform3D(-0.169126, 0.938503, -0.301012, -0.729922, 0.0859552, 0.678105, 0.662277, 0.3344, 0.670497, 0.444297, 0.483048, 0.139451)
+bones/20/position = Vector3(0.444297, 0.483048, 0.139451)
+bones/20/rotation = Quaternion(-0.136402, -0.382291, -0.662131, 0.629946)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/rest = Transform3D(0.254481, 0.950022, 0.180827, -0.76768, 0.0847322, 0.635207, 0.588139, -0.300465, 0.750875, 0.43275, 0.483048, -0.165385)
+bones/21/position = Vector3(0.43275, 0.483048, -0.165385)
+bones/21/rotation = Quaternion(-0.323602, -0.140869, -0.594067, 0.722857)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/rest = Transform3D(0.559886, 0.347928, 0.75198, -0.817832, 0.0864182, 0.568931, 0.132962, -0.93353, 0.332931, 0.166711, 0.483048, -0.394844)
+bones/22/position = Vector3(0.166711, 0.483048, -0.394844)
+bones/22/rotation = Quaternion(-0.533979, 0.220001, -0.414315, 0.703426)
+bones/24/rest = Transform3D(0.0766964, 0.997054, 0, -0.997054, 0.0766964, 0, 0, 0, 1, 1.5, -0.0999999, 0)
+bones/24/position = Vector3(1.5, -0.0999999, 0)
+bones/24/scale = Vector3(0.999999, 0.999999, 1)
+bones/27/rest = Transform3D(-0.283599, -0.958943, -2.38419e-07, 8.9407e-08, -2.38419e-07, 1, -0.958943, 0.283599, 1.19209e-07, -0.5, 0.5, 0.176057)
+bones/27/position = Vector3(-0.5, 0.5, 0.176057)
+bones/27/rotation = Quaternion(-0.423202, 0.56648, 0.56648, 0.423202)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/rest = Transform3D(-0.952073, -0.305871, 3.27826e-07, 3.57628e-07, 0, 1, -0.30587, 0.952073, 1.19209e-07, -0.198046, 0.5, 0.438992)
+bones/28/position = Vector3(-0.198046, 0.5, 0.438992)
+bones/28/rotation = Quaternion(-0.109461, 0.698583, 0.698583, 0.109461)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/rest = Transform3D(0.300645, -0.953736, -5.96046e-08, 4.76837e-07, 1.19209e-07, 1, -0.953736, -0.300645, 4.76837e-07, -0.503991, 0.5, -0.175115)
+bones/29/position = Vector3(-0.503991, 0.5, -0.175115)
+bones/29/rotation = Quaternion(-0.570229, 0.418137, 0.418137, 0.570229)
+bones/29/scale = Vector3(1, 1, 1)
+bones/30/rest = Transform3D(0.944684, -0.327982, -1.93715e-07, 2.83122e-07, 1.19209e-07, 1, -0.327982, -0.944684, 1.78814e-07, -0.200706, 0.5, -0.450465)
+bones/30/position = Vector3(-0.200706, 0.5, -0.450465)
+bones/30/rotation = Quaternion(-0.69726, 0.117597, 0.117597, 0.69726)
+bones/30/scale = Vector3(1, 1, 1)
+bones/32/rest = Transform3D(0.0766964, -0.997054, 0, 0.997054, 0.0766964, 0, 0, 0, 1, -1.5, -0.0999999, 0)
+bones/32/position = Vector3(-1.5, -0.0999999, 0)
+bones/32/scale = Vector3(0.999999, 0.999999, 1)
+bones/35/rest = Transform3D(0.283599, 0.958943, -1.19209e-07, -1.19209e-07, -1.19209e-07, -1, -0.958943, 0.283599, 5.96046e-08, 0.5, 0.5, 0.176057)
+bones/35/position = Vector3(0.5, 0.5, 0.176057)
+bones/35/rotation = Quaternion(0.56648, 0.423202, -0.423202, 0.56648)
+bones/36/rest = Transform3D(0.952073, 0.30587, -2.68221e-07, -2.98023e-07, 1.19209e-07, -1, -0.30587, 0.952073, 1.78814e-07, 0.198046, 0.5, 0.438992)
+bones/36/position = Vector3(0.198046, 0.5, 0.438992)
+bones/36/rotation = Quaternion(0.698583, 0.109461, -0.109461, 0.698583)
+bones/36/scale = Vector3(1, 1, 1)
+bones/37/rest = Transform3D(-0.300645, 0.953736, -1.49012e-07, -3.57628e-07, -2.38419e-07, -1, -0.953736, -0.300645, 3.57628e-07, 0.503991, 0.5, -0.175115)
+bones/37/position = Vector3(0.503991, 0.5, -0.175115)
+bones/37/rotation = Quaternion(-0.418137, -0.570229, 0.570229, -0.418137)
+bones/38/rest = Transform3D(-0.944684, 0.327982, 3.42727e-07, -4.02331e-07, -1.19209e-07, -1, -0.327982, -0.944684, 1.19209e-07, 0.200706, 0.5, -0.450465)
+bones/38/position = Vector3(0.200706, 0.5, -0.450465)
+bones/38/rotation = Quaternion(-0.117597, -0.69726, 0.69726, -0.117597)
+bones/38/scale = Vector3(1, 1, 1)
+bones/40/rest = Transform3D(2.98023e-07, 0, 1, 1, -1.19209e-07, -3.27826e-07, 8.9407e-08, 1, 0, 0, 1, 3.3)
+bones/40/rotation = Quaternion(0.5, 0.5, 0.5, 0.5)
+bones/40/scale = Vector3(1, 1, 1)
+bones/41/rest = Transform3D(0.996546, 0.0830455, -4.61863e-07, -0.0830455, 0.996546, 7.45825e-08, 4.66462e-07, -3.59692e-08, 1, 7.4505e-09, 0.800001, -4.41085e-15)
+bones/41/position = Vector3(7.4505e-09, 0.800001, -4.41085e-15)
+bones/41/rotation = Quaternion(-2.76618e-08, -2.32282e-07, -0.0415586, 0.999136)
+bones/42/rest = Transform3D(0.996546, -0.0830454, 2.60544e-07, 0.0830454, 0.996546, -5.3129e-08, -2.55231e-07, 7.45824e-08, 1, -2.98023e-08, 1.20416, 0)
+bones/42/position = Vector3(-2.98023e-08, 1.20416, 0)
+bones/42/rotation = Quaternion(3.19555e-08, 1.29055e-07, 0.0415586, 0.999136)
+bones/42/scale = Vector3(1, 1, 1)
+bones/44/rest = Transform3D(0.999261, -0.0384331, -3.3032e-07, 0.0384331, 0.999261, -3.73106e-08, 3.31509e-07, 2.45879e-08, 1, 0, 1.4, 1.42109e-14)
+bones/44/position = Vector3(0, 1.4, 1.42109e-14)
+bones/44/rotation = Quaternion(1.54775e-08, -1.65488e-07, 0.0192201, 0.999815)
+bones/44/scale = Vector3(1, 1, 1)
 
 [node name="leg-ul-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="1"]
 process_priority = 1
@@ -11,7 +111,7 @@ root_bone = &"leg-ul-thigh"
 tip_bone = &"leg-ul-foot"
 use_magnet = true
 magnet = Vector3(0, 5, 0)
-target_node = NodePath("../../../leg-ul-target")
+target_node = NodePath("../../../leg-ul-target/leg-ul-target-offset")
 script = ExtResource("2_s2ilb")
 
 [node name="leg-ur-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="2"]
@@ -20,7 +120,7 @@ root_bone = &"leg-ur-thigh"
 tip_bone = &"leg-ur-foot"
 use_magnet = true
 magnet = Vector3(0, 5, 0)
-target_node = NodePath("../../../leg-ur-target")
+target_node = NodePath("../../../leg-ur-target/leg-ur-target-offset")
 script = ExtResource("2_s2ilb")
 
 [node name="leg-ll-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="3"]
@@ -29,7 +129,7 @@ root_bone = &"leg-ll-thigh"
 tip_bone = &"leg-ll-foot"
 use_magnet = true
 magnet = Vector3(0, 5, 0)
-target_node = NodePath("../../../leg-ll-target")
+target_node = NodePath("../../../leg-ll-target/leg-ll-target-offset")
 script = ExtResource("2_s2ilb")
 
 [node name="leg-lr-ik" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="4"]
@@ -38,21 +138,33 @@ root_bone = &"leg-lr-thigh"
 tip_bone = &"leg-lr-foot"
 use_magnet = true
 magnet = Vector3(0, 5, 0)
-target_node = NodePath("../../../leg-lr-target")
+target_node = NodePath("../../../leg-lr-target/leg-lr-target-offset")
 script = ExtResource("2_s2ilb")
 
-[node name="leg-ul-target" type="Marker3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.53479, -0.148052, -1.95462)
+[node name="leg-ul-target" type="Marker3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75, -0.628837, -2)
 top_level = true
 
-[node name="leg-ur-target" type="Marker3D" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.8456, -2)
+[node name="leg-ul-target-offset" type="Marker3D" parent="leg-ul-target" index="0"]
+transform = Transform3D(4.37114e-08, -3.82137e-15, -1, -8.74228e-08, -1, 0, -1, 8.74228e-08, -4.37114e-08, 0, 0.6, 0)
+
+[node name="leg-ur-target" type="Marker3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -1, -2)
 top_level = true
 
-[node name="leg-ll-target" type="Marker3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.8456, 2)
+[node name="leg-ur-target-offset" type="Marker3D" parent="leg-ur-target" index="0"]
+transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, 0, 0.6, 0)
+
+[node name="leg-ll-target" type="Marker3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75, -1, 2)
 top_level = true
 
-[node name="leg-lr-target" type="Marker3D" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.8456, 2)
+[node name="leg-ll-target-offset" type="Marker3D" parent="leg-ll-target" index="0"]
+transform = Transform3D(4.37114e-08, -3.82137e-15, -1, -8.74228e-08, -1, 0, -1, 8.74228e-08, -4.37114e-08, 0, 0.6, 0)
+
+[node name="leg-lr-target" type="Marker3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -1, 2)
 top_level = true
+
+[node name="leg-lr-target-offset" type="Marker3D" parent="leg-lr-target" index="0"]
+transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, 0, 0.6, 0)

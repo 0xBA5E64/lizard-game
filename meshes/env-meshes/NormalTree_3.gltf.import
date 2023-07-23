@@ -1,0 +1,52 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cwpshgver1vro"
+path="res://.godot/imported/NormalTree_3.gltf-c23865acd8f6b02c92c571d1a70a9b39.scn"
+
+[deps]
+
+source_file="res://meshes/env-meshes/NormalTree_3.gltf"
+dest_files=["res://.godot/imported/NormalTree_3.gltf-c23865acd8f6b02c92c571d1a70a9b39.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"NormalTree_Bark": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/NormalTree_Bark.tres"
+},
+"NormalTree_Leaves": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/NormalTree_Leaves.tres"
+}
+},
+"nodes": {
+"PATH:NormalTree_32": {
+"generate/physics": true,
+"physics/shape_type": 6,
+"primitive/height": 5.0,
+"primitive/position": Vector3(0.15, 2.3, 0),
+"primitive/radius": 0.3
+}
+}
+}
+gltf/embedded_image_handling=1

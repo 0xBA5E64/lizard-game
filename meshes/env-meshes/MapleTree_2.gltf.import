@@ -1,0 +1,52 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dpffe1w5yuqdm"
+path="res://.godot/imported/MapleTree_2.gltf-482e2cf325c7407a149a7e85e1d1a255.scn"
+
+[deps]
+
+source_file="res://meshes/env-meshes/MapleTree_2.gltf"
+dest_files=["res://.godot/imported/MapleTree_2.gltf-482e2cf325c7407a149a7e85e1d1a255.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"MapleTree_Bark": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/MapleTree_Bark.tres"
+},
+"MapleTree_Leaves": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/MapleTree_Leaves.tres"
+}
+},
+"nodes": {
+"PATH:MapleTree_22": {
+"generate/physics": true,
+"physics/shape_type": 6,
+"primitive/height": 5.0,
+"primitive/position": Vector3(0, 2.2, 0),
+"primitive/radius": 0.4
+}
+}
+}
+gltf/embedded_image_handling=1

@@ -1,6 +1,49 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwsv7slc7b4mb"]
+[gd_scene load_steps=52 format=3 uid="uid://bwsv7slc7b4mb"]
 
 [ext_resource type="PackedScene" uid="uid://d1vlgy4xohyga" path="res://asset-scenes/AnthroCharController.tscn" id="1_47oxk"]
+[ext_resource type="PackedScene" uid="uid://ciwx7d1imhjlo" path="res://meshes/env-meshes/BirchTree_1.gltf" id="2_knxnt"]
+[ext_resource type="PackedScene" uid="uid://c0khvepn4j1po" path="res://meshes/env-meshes/BirchTree_2.gltf" id="3_1unl7"]
+[ext_resource type="PackedScene" uid="uid://bvrxgyyl6m8g" path="res://meshes/env-meshes/BirchTree_3.gltf" id="4_pv0gv"]
+[ext_resource type="PackedScene" uid="uid://geid2d2kdbt1" path="res://meshes/env-meshes/BirchTree_4.gltf" id="5_hsb7y"]
+[ext_resource type="PackedScene" uid="uid://bgnvb0nl6smb" path="res://meshes/env-meshes/BirchTree_5.gltf" id="6_rr6re"]
+[ext_resource type="PackedScene" uid="uid://l82i8sbhyq8y" path="res://meshes/env-meshes/Bush.gltf" id="7_875dq"]
+[ext_resource type="PackedScene" uid="uid://desx7ho5w0qk8" path="res://meshes/env-meshes/Bush_Large.gltf" id="8_3qkc7"]
+[ext_resource type="PackedScene" uid="uid://cjw1frubk6cty" path="res://meshes/env-meshes/Bush_Small.gltf" id="9_8quen"]
+[ext_resource type="PackedScene" uid="uid://bp8n5pr5fo1p6" path="res://meshes/env-meshes/Bush_Small_Flowers.gltf" id="10_bflqd"]
+[ext_resource type="PackedScene" uid="uid://b7oy84b1pj5ye" path="res://meshes/env-meshes/Bush_Large_Flowers.gltf" id="11_e0b33"]
+[ext_resource type="PackedScene" uid="uid://c07251j7scf3u" path="res://meshes/env-meshes/DeadTree_1.gltf" id="11_pridm"]
+[ext_resource type="PackedScene" uid="uid://dmno0s0ntuhm2" path="res://meshes/env-meshes/DeadTree_2.gltf" id="12_wtnku"]
+[ext_resource type="PackedScene" uid="uid://bxb7wpk444n6j" path="res://meshes/env-meshes/DeadTree_3.gltf" id="13_8dvqj"]
+[ext_resource type="PackedScene" uid="uid://bneh05su4too6" path="res://meshes/env-meshes/DeadTree_4.gltf" id="14_d3jvn"]
+[ext_resource type="PackedScene" uid="uid://m4p3luefjkw7" path="res://meshes/env-meshes/DeadTree_5.gltf" id="15_7nj27"]
+[ext_resource type="PackedScene" uid="uid://dv22ex7wpe01c" path="res://meshes/env-meshes/DeadTree_6.gltf" id="16_3ibr4"]
+[ext_resource type="PackedScene" uid="uid://b3hhc6476w0op" path="res://meshes/env-meshes/DeadTree_7.gltf" id="17_bdpyy"]
+[ext_resource type="PackedScene" uid="uid://rij1dotlgyyj" path="res://meshes/env-meshes/DeadTree_8.gltf" id="18_6kbkg"]
+[ext_resource type="PackedScene" uid="uid://cakwq1sj24rig" path="res://meshes/env-meshes/DeadTree_9.gltf" id="19_qv530"]
+[ext_resource type="PackedScene" uid="uid://cde6ypjtci2l0" path="res://meshes/env-meshes/DeadTree_10.gltf" id="20_uc65q"]
+[ext_resource type="PackedScene" uid="uid://dybclk3uksy6d" path="res://meshes/env-meshes/MapleTree_1.gltf" id="21_pfhpk"]
+[ext_resource type="PackedScene" uid="uid://dpffe1w5yuqdm" path="res://meshes/env-meshes/MapleTree_2.gltf" id="22_m7bs2"]
+[ext_resource type="PackedScene" uid="uid://c1i24ar85lg16" path="res://meshes/env-meshes/MapleTree_3.gltf" id="23_7vphm"]
+[ext_resource type="PackedScene" uid="uid://uf758o4bvuya" path="res://meshes/env-meshes/MapleTree_4.gltf" id="24_1fyv2"]
+[ext_resource type="PackedScene" uid="uid://d4asfp3fsvl8m" path="res://meshes/env-meshes/MapleTree_5.gltf" id="25_b66ue"]
+[ext_resource type="PackedScene" uid="uid://bbblvdecbryyd" path="res://meshes/env-meshes/NormalTree_1.gltf" id="26_jbuee"]
+[ext_resource type="PackedScene" uid="uid://jhumx0bjtan4" path="res://meshes/env-meshes/NormalTree_2.gltf" id="27_i8i3d"]
+[ext_resource type="PackedScene" uid="uid://cwpshgver1vro" path="res://meshes/env-meshes/NormalTree_3.gltf" id="28_xy42h"]
+[ext_resource type="PackedScene" uid="uid://cxspmahbybwn6" path="res://meshes/env-meshes/NormalTree_4.gltf" id="29_bu6qs"]
+[ext_resource type="PackedScene" uid="uid://c48xmms7vlge3" path="res://meshes/env-meshes/NormalTree_5.gltf" id="30_pknri"]
+[ext_resource type="PackedScene" uid="uid://btlc2rikxa5u7" path="res://meshes/env-meshes/PineTree_1.gltf" id="31_a1fys"]
+[ext_resource type="PackedScene" uid="uid://bh4e1hles7hwm" path="res://meshes/env-meshes/PineTree_2.gltf" id="32_ogt4f"]
+[ext_resource type="PackedScene" uid="uid://dwog2txf3628q" path="res://meshes/env-meshes/PineTree_3.gltf" id="33_3e6me"]
+[ext_resource type="PackedScene" uid="uid://dww4hhuyg6cst" path="res://meshes/env-meshes/PineTree_4.gltf" id="34_8dj5r"]
+[ext_resource type="PackedScene" uid="uid://ug15ckquvlnd" path="res://meshes/env-meshes/PineTree_5.gltf" id="35_igr67"]
+[ext_resource type="PackedScene" uid="uid://bgu7ctwxd6xvd" path="res://meshes/env-meshes/Plant_1.gltf" id="37_resub"]
+[ext_resource type="PackedScene" uid="uid://dhn6etcdta4cv" path="res://meshes/env-meshes/Plant_2.gltf" id="38_agmsi"]
+[ext_resource type="PackedScene" uid="uid://bk1cj7mfyubmh" path="res://meshes/env-meshes/Plant_Flowers.gltf" id="39_7s0fk"]
+[ext_resource type="PackedScene" uid="uid://cj1w54usogfxm" path="res://meshes/env-meshes/Rock_1.gltf" id="40_qpxq0"]
+[ext_resource type="PackedScene" uid="uid://cq75sajajlv3p" path="res://meshes/env-meshes/Rock_2.gltf" id="41_7x4rq"]
+[ext_resource type="PackedScene" uid="uid://dyjtet3cbmqct" path="res://meshes/env-meshes/Rock_3.gltf" id="42_3u1mn"]
+[ext_resource type="PackedScene" uid="uid://7t6y76ksun2k" path="res://meshes/env-meshes/Rock_4.gltf" id="43_5atro"]
+[ext_resource type="PackedScene" uid="uid://d2y7rno6w01ra" path="res://meshes/env-meshes/Rock_5.gltf" id="44_31e0d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0pjlg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -78,3 +121,150 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_qpe00")
 
 [node name="AnthroCharController" parent="." instance=ExtResource("1_47oxk")]
+
+[node name="BirchTrees" type="Node3D" parent="."]
+
+[node name="BirchTree_1" parent="BirchTrees" instance=ExtResource("2_knxnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0495, -0.112552, -9.0359)
+
+[node name="BirchTree_2" parent="BirchTrees" instance=ExtResource("3_1unl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0161, -0.112552, -7.11387)
+
+[node name="BirchTree_3" parent="BirchTrees" instance=ExtResource("4_pv0gv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1218, -0.112552, -5.03687)
+
+[node name="BirchTree_4" parent="BirchTrees" instance=ExtResource("5_hsb7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0945, -0.112552, -3.0473)
+
+[node name="BirchTree_5" parent="BirchTrees" instance=ExtResource("6_rr6re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.0903605, -1)
+
+[node name="Bushes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -9)
+
+[node name="Bush" parent="Bushes" instance=ExtResource("7_875dq")]
+
+[node name="Bush_Large" parent="Bushes" instance=ExtResource("8_3qkc7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 2)
+
+[node name="Bush_Small" parent="Bushes" instance=ExtResource("9_8quen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Bush_Small_Flowers" parent="Bushes" instance=ExtResource("10_bflqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="Bush_Large_Flowers" parent="Bushes" instance=ExtResource("11_e0b33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Bush_Small_Flowers2" parent="Bushes" instance=ExtResource("10_bflqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="DeadTrees" type="Node3D" parent="."]
+
+[node name="DeadTree_1" parent="DeadTrees" instance=ExtResource("11_pridm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0009, 0.0148618, 1.00006)
+
+[node name="DeadTree_2" parent="DeadTrees" instance=ExtResource("12_wtnku")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 3)
+
+[node name="DeadTree_3" parent="DeadTrees" instance=ExtResource("13_8dvqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 5)
+
+[node name="DeadTree_4" parent="DeadTrees" instance=ExtResource("14_d3jvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 7)
+
+[node name="DeadTree_5" parent="DeadTrees" instance=ExtResource("15_7nj27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 9)
+
+[node name="DeadTree_6" parent="DeadTrees" instance=ExtResource("16_3ibr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 11)
+
+[node name="DeadTree_7" parent="DeadTrees" instance=ExtResource("17_bdpyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 11)
+
+[node name="DeadTree_8" parent="DeadTrees" instance=ExtResource("18_6kbkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
+
+[node name="DeadTree_9" parent="DeadTrees" instance=ExtResource("19_qv530")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 11)
+
+[node name="DeadTree_10" parent="DeadTrees" instance=ExtResource("20_uc65q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 11)
+
+[node name="MapleTrees" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 11)
+
+[node name="MapleTree_1" parent="MapleTrees" instance=ExtResource("21_pfhpk")]
+
+[node name="MapleTree_2" parent="MapleTrees" instance=ExtResource("22_m7bs2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
+
+[node name="MapleTree_3" parent="MapleTrees" instance=ExtResource("23_7vphm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -10)
+
+[node name="MapleTree_4" parent="MapleTrees" instance=ExtResource("24_1fyv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -13)
+
+[node name="MapleTree_5" parent="MapleTrees" instance=ExtResource("25_b66ue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -17)
+
+[node name="NormalTrees" type="Node3D" parent="."]
+
+[node name="NormalTree_1" parent="NormalTrees" instance=ExtResource("26_jbuee")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -11)
+
+[node name="NormalTree_2" parent="NormalTrees" instance=ExtResource("27_i8i3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -11)
+
+[node name="NormalTree_3" parent="NormalTrees" instance=ExtResource("28_xy42h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -11)
+
+[node name="NormalTree_4" parent="NormalTrees" instance=ExtResource("29_bu6qs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -11)
+
+[node name="NormalTree_5" parent="NormalTrees" instance=ExtResource("30_pknri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
+
+[node name="PineTrees" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
+
+[node name="PineTree_1" parent="PineTrees" instance=ExtResource("31_a1fys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12)
+
+[node name="PineTree_2" parent="PineTrees" instance=ExtResource("32_ogt4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 14)
+
+[node name="PineTree_3" parent="PineTrees" instance=ExtResource("33_3e6me")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 15)
+
+[node name="PineTree_4" parent="PineTrees" instance=ExtResource("34_8dj5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 16)
+
+[node name="PineTree_5" parent="PineTrees" instance=ExtResource("35_igr67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 18)
+
+[node name="Plants" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -6)
+
+[node name="Plant_1" parent="Plants" instance=ExtResource("37_resub")]
+
+[node name="Plant_2" parent="Plants" instance=ExtResource("38_agmsi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="Plant_Flowers" parent="Plants" instance=ExtResource("39_7s0fk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2.39706)
+
+[node name="Rock_1" parent="." instance=ExtResource("40_qpxq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4)
+
+[node name="Rock_2" parent="." instance=ExtResource("41_7x4rq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2)
+
+[node name="Rock_3" parent="." instance=ExtResource("42_3u1mn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+
+[node name="Rock_4" parent="." instance=ExtResource("43_5atro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
+
+[node name="Rock_5" parent="." instance=ExtResource("44_31e0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)

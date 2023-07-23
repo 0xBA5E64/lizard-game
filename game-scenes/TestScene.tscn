@@ -36,7 +36,6 @@ shadow_blur = 0.0
 [node name="TestFloor" type="MeshInstance3D" parent="."]
 transform = Transform3D(24.2518, 0, 0, 0, 0.1, 0, 0, 0, 24.2518, 0, -0.162552, 0)
 mesh = SubResource("BoxMesh_ge4xs")
-skeleton = NodePath("../Main Char v1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestFloor"]
 collision_layer = 3

@@ -13,6 +13,7 @@ var jumpDelay = 0
 
 var playerLookAt
 var lastLookAtDirection : Vector3
+var lastWalkDirection : Vector2
 
 func _ready():
 	playerLookAt = get_tree().get_nodes_in_group("CameraController")[0].get_node("PlayerLookAt")
@@ -25,6 +26,7 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		jumping = true
+		$AnimationTreeBlend.set("parameters/Jumping/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 		jumpDelay = JUMP_DELAY_TIME
 	if jumpDelay > 0:
 		jumpDelay -= delta
@@ -47,11 +49,10 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	$AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO && is_on_floor())
-	$AnimationTree.set("parameters/conditions/walkForward", input_dir.y == -1 && is_on_floor())	
-	$AnimationTree.set("parameters/conditions/walkBackward", input_dir.y == 1 && is_on_floor())	
-	$AnimationTree.set("parameters/conditions/strafeLeft", input_dir.x == -1 && is_on_floor())	
-	$AnimationTree.set("parameters/conditions/strafeRight", input_dir.x == 1 && is_on_floor())	
-	$AnimationTree.set("parameters/conditions/jump", jumping)	
+		
+	# Play the animation for the walking direction
+	var walkLerpDirection = lerp(lastWalkDirection, Vector2(input_dir.x, -input_dir.y), 5 * delta)
+	$AnimationTreeBlend.set("parameters/Walking/blend_position", walkLerpDirection)
+	lastWalkDirection = walkLerpDirection
+	
 	move_and_slide()

@@ -29,7 +29,7 @@ glow_enabled = true
 environment = SubResource("Environment_et8rm")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.169541, 0.711849, -0.681562, 0.041987, 0.696164, 0.716654, 0.984628, 0.0928852, -0.147916, 0, 3.94109, 0)
+transform = Transform3D(-0.169541, 0.711849, -0.681563, 0.041987, 0.696164, 0.716654, 0.984628, 0.0928855, -0.147917, 0, 6.96616, 0)
 shadow_enabled = true
 shadow_blur = 0.0
 

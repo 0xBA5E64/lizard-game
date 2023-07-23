@@ -1,0 +1,52 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bgnvb0nl6smb"
+path="res://.godot/imported/BirchTree_5.gltf-781a32f257b2be1cf35171fa5917fbec.scn"
+
+[deps]
+
+source_file="res://meshes/env-meshes/BirchTree_5.gltf"
+dest_files=["res://.godot/imported/BirchTree_5.gltf-781a32f257b2be1cf35171fa5917fbec.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"BirchTree_Bark": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/BirchTree_Bark.tres"
+},
+"BirchTree_Leaves": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/BirchTree_Leaves.tres"
+}
+},
+"nodes": {
+"PATH:BirchTree_52": {
+"generate/physics": true,
+"physics/shape_type": 6,
+"primitive/height": 5.0,
+"primitive/position": Vector3(0, 2.2, 0),
+"primitive/radius": 0.2
+}
+}
+}
+gltf/embedded_image_handling=1

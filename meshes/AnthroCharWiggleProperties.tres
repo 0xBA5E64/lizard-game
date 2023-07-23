@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WiggleProperties" load_steps=2 format=3 uid="uid://5wpjpw77g421"]
+
+[ext_resource type="Script" path="res://addons/wigglebone/wiggle_properties.gd" id="1_4wh4b"]
+
+[resource]
+script = ExtResource("1_4wh4b")
+mode = 0
+stiffness = 0.036
+damping = 0.21
+gravity = Vector3(0, 0, 0)
+length = 23.0
+max_degrees = 30.0
+max_distance = 0.1

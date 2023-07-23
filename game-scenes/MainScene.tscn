@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://eqce7e80co3x"]
+
+[ext_resource type="PackedScene" uid="uid://d1vlgy4xohyga" path="res://asset-scenes/AnthroCharController.tscn" id="1_rp7qq"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_qy8do"]
+[ext_resource type="Resource" path="res://meshes/terrain/terrain2/data.hterrain" id="3_ywsoa"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_doprl"]
+[ext_resource type="Material" uid="uid://jroupaac7y06" path="res://meshes/env-textures/Water.tres" id="5_cywwd"]
+[ext_resource type="PackedScene" uid="uid://ciwx7d1imhjlo" path="res://meshes/env-meshes/BirchTree_1.gltf" id="6_n3yi5"]
+[ext_resource type="PackedScene" uid="uid://dybclk3uksy6d" path="res://meshes/env-meshes/MapleTree_1.gltf" id="7_g4k1o"]
+[ext_resource type="PackedScene" uid="uid://dhn6etcdta4cv" path="res://meshes/env-meshes/Plant_2.gltf" id="8_nqbmp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c34vc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ey73l"]
+sky_material = SubResource("ProceduralSkyMaterial_c34vc")
+
+[sub_resource type="Environment" id="Environment_hi2k1"]
+background_mode = 2
+sky = SubResource("Sky_ey73l")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Resource" id="Resource_8sdtv"]
+script = ExtResource("4_doprl")
+mode = 0
+textures = [[], []]
+
+[sub_resource type="QuadMesh" id="QuadMesh_yqdji"]
+material = ExtResource("5_cywwd")
+size = Vector2(100, 100)
+subdivide_width = 500
+subdivide_depth = 500
+orientation = 1
+
+[node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hi2k1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.609318, -0.686695, 0.396462, 0, 0.499998, 0.866026, -0.792926, -0.527686, 0.304658, 0, 3.92541, 0)
+shadow_enabled = true
+
+[node name="AnthroCharController" parent="." instance=ExtResource("1_rp7qq")]
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("2_qy8do")
+centered = true
+_terrain_data = ExtResource("3_ywsoa")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_8sdtv")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale_per_texture = null
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
+shader_params/u_globalmap_blend_start = null
+shader_params/u_globalmap_blend_distance = null
+shader_params/u_colormap_opacity_per_texture = null
+
+[node name="Water" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.433628, -0.325346, -0.625923)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_yqdji")
+
+[node name="BirchTree_1" parent="." instance=ExtResource("6_n3yi5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44276, -0.462852, -10.5033)
+
+[node name="MapleTree_1" parent="." instance=ExtResource("7_g4k1o")]
+transform = Transform3D(0.397404, 0, 0.917644, 0, 1, 0, -0.917644, 0, 0.397404, -3.46484, -0.270257, -12.0688)
+
+[node name="Plant_2" parent="." instance=ExtResource("8_nqbmp")]
+transform = Transform3D(0.716886, 0, 0.69719, 0, 1, 0, -0.69719, 0, 0.716886, -0.900374, 0, -10.561)
+
+[node name="Plant_3" parent="." instance=ExtResource("8_nqbmp")]
+transform = Transform3D(0.514867, 0, -0.00601148, 0, 0.698954, 0, 0.00717141, 0, 0.431591, -1.49611, 0, -9.9794)

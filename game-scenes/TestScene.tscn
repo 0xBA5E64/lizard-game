@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bwsv7slc7b4mb"]
+[gd_scene load_steps=57 format=3 uid="uid://bwsv7slc7b4mb"]
 
 [ext_resource type="PackedScene" uid="uid://d1vlgy4xohyga" path="res://asset-scenes/AnthroCharController.tscn" id="1_47oxk"]
 [ext_resource type="PackedScene" uid="uid://ciwx7d1imhjlo" path="res://meshes/env-meshes/BirchTree_1.gltf" id="2_knxnt"]
@@ -44,6 +44,11 @@
 [ext_resource type="PackedScene" uid="uid://dyjtet3cbmqct" path="res://meshes/env-meshes/Rock_3.gltf" id="42_3u1mn"]
 [ext_resource type="PackedScene" uid="uid://7t6y76ksun2k" path="res://meshes/env-meshes/Rock_4.gltf" id="43_5atro"]
 [ext_resource type="PackedScene" uid="uid://d2y7rno6w01ra" path="res://meshes/env-meshes/Rock_5.gltf" id="44_31e0d"]
+[ext_resource type="PackedScene" uid="uid://d1vd0yfy7q6t0" path="res://meshes/env-meshes/PalmTree_1.gltf" id="45_e3y2a"]
+[ext_resource type="PackedScene" uid="uid://blwf6osfgb106" path="res://meshes/env-meshes/PalmTree_2.gltf" id="46_i56vo"]
+[ext_resource type="PackedScene" uid="uid://dfvgcqemmeg6p" path="res://meshes/env-meshes/PalmTree_3.gltf" id="47_w1eg8"]
+[ext_resource type="PackedScene" uid="uid://ctcmi6kvhw1a7" path="res://meshes/env-meshes/PalmTree_4.gltf" id="48_4y5n2"]
+[ext_resource type="PackedScene" uid="uid://dk1q870hxxid1" path="res://meshes/env-meshes/PalmTree_5.gltf" id="49_8b1vg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0pjlg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -268,3 +273,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
 
 [node name="Rock_5" parent="." instance=ExtResource("44_31e0d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+
+[node name="PalmTree_1" parent="." instance=ExtResource("45_e3y2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+
+[node name="PalmTree_2" parent="." instance=ExtResource("46_i56vo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3)
+
+[node name="PalmTree_3" parent="." instance=ExtResource("47_w1eg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
+
+[node name="PalmTree_4" parent="." instance=ExtResource("48_4y5n2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+
+[node name="PalmTree_5" parent="." instance=ExtResource("49_8b1vg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)

@@ -8,6 +8,7 @@ transparency = 3
 alpha_hash_scale = 2.0
 alpha_antialiasing_mode = 1
 alpha_antialiasing_edge = 1.0
+cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
 albedo_texture = ExtResource("1_me61f")

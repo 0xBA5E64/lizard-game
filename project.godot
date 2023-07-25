@@ -13,7 +13,7 @@ config_version=5
 [application]
 
 config/name="lizard-walk"
-run/main_scene="res://game-scenes/MainScene.tscn"
+run/main_scene="res://game-scenes/Bocklin.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
@@ -30,7 +30,7 @@ version_control_plugin_name="GitAPI"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/wigglebone/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+enabled=PackedStringArray("res://addons/proton_scatter/plugin.cfg", "res://addons/wigglebone/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
 [filesystem]
 

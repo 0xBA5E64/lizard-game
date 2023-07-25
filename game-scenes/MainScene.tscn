@@ -1,13 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://eqce7e80co3x"]
+[gd_scene load_steps=26 format=3 uid="uid://eqce7e80co3x"]
 
 [ext_resource type="PackedScene" uid="uid://d1vlgy4xohyga" path="res://asset-scenes/AnthroCharController.tscn" id="1_rp7qq"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_qy8do"]
 [ext_resource type="Resource" path="res://meshes/terrain/terrain2/data.hterrain" id="3_ywsoa"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_doprl"]
 [ext_resource type="Material" uid="uid://jroupaac7y06" path="res://meshes/env-textures/Water.tres" id="5_cywwd"]
-[ext_resource type="PackedScene" uid="uid://ciwx7d1imhjlo" path="res://meshes/env-meshes/BirchTree_1.gltf" id="6_n3yi5"]
-[ext_resource type="PackedScene" uid="uid://dybclk3uksy6d" path="res://meshes/env-meshes/MapleTree_1.gltf" id="7_g4k1o"]
-[ext_resource type="PackedScene" uid="uid://dhn6etcdta4cv" path="res://meshes/env-meshes/Plant_2.gltf" id="8_nqbmp"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="6_bfei1"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="7_fls5x"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="8_tpofo"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="9_570me"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/relax.gd" id="10_0liv6"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/project_on_geometry.gd" id="11_h8lwd"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="12_sx7d4"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="13_oy3mk"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="14_70px7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c34vc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -29,10 +35,66 @@ textures = [[], []]
 
 [sub_resource type="QuadMesh" id="QuadMesh_yqdji"]
 material = ExtResource("5_cywwd")
-size = Vector2(100, 100)
+size = Vector2(128, 128)
 subdivide_width = 500
 subdivide_depth = 500
 orientation = 1
+
+[sub_resource type="Resource" id="Resource_yhpi8"]
+script = ExtResource("8_tpofo")
+amount = 5
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = true
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_at5vh"]
+script = ExtResource("9_570me")
+position = Vector3(0, 0, 0)
+rotation = Vector3(0, 360, 0)
+scale = Vector3(0, 0, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_d7tyw"]
+script = ExtResource("10_0liv6")
+iterations = 3
+offset_step = 0.2
+consecutive_step_multiplier = 0.75
+use_computeshader = true
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = true
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_6be0o"]
+script = ExtResource("11_h8lwd")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 5.0
+ray_offset = 5.0
+remove_points_on_miss = true
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 1
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_8eo7u"]
+script = ExtResource("7_fls5x")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_yhpi8"), SubResource("Resource_at5vh"), SubResource("Resource_d7tyw"), SubResource("Resource_6be0o")])
+
+[sub_resource type="Resource" id="Resource_5hntp"]
+script = ExtResource("14_70px7")
+size = Vector3(30, 4, 30)
 
 [node name="MainScene" type="Node3D"]
 
@@ -44,42 +106,67 @@ transform = Transform3D(0.609318, -0.686695, 0.396462, 0, 0.499998, 0.866026, -0
 shadow_enabled = true
 
 [node name="AnthroCharController" parent="." instance=ExtResource("1_rp7qq")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 43.5203, 6.30948, -91.3434)
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("2_qy8do")
+map_scale = Vector3(0.5, 0.5, 0.5)
 centered = true
 _terrain_data = ExtResource("3_ywsoa")
 chunk_size = 32
 collision_enabled = true
 collision_layer = 1
 collision_mask = 1
-shader_type = "Classic4"
+shader_type = "Classic4Lite"
 custom_shader = null
 custom_globalmap_shader = null
 texture_set = SubResource("Resource_8sdtv")
 render_layers = 1
 cast_shadow = 1
-shader_params/u_ground_uv_scale_per_texture = null
+shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
-shader_params/u_globalmap_blend_start = null
-shader_params/u_globalmap_blend_distance = null
-shader_params/u_colormap_opacity_per_texture = null
 
 [node name="Water" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.433628, -0.325346, -0.625923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0954, 3.51881, -19.6307)
 cast_shadow = 0
 mesh = SubResource("QuadMesh_yqdji")
 
-[node name="BirchTree_1" parent="." instance=ExtResource("6_n3yi5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44276, -0.462852, -10.5033)
+[node name="ProtonScatter" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4.17519, -52.2949)
+visible = false
+script = ExtResource("6_bfei1")
+keep_static_colliders = true
+modifier_stack = SubResource("Resource_8eo7u")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
 
-[node name="MapleTree_1" parent="." instance=ExtResource("7_g4k1o")]
-transform = Transform3D(0.397404, 0, 0.917644, 0, 1, 0, -0.917644, 0, 0.397404, -3.46484, -0.270257, -12.0688)
+[node name="BirchTree1" type="Node3D" parent="ProtonScatter"]
+script = ExtResource("12_sx7d4")
+path = "res://meshes/env-meshes/BirchTree_1.gltf"
 
-[node name="Plant_2" parent="." instance=ExtResource("8_nqbmp")]
-transform = Transform3D(0.716886, 0, 0.69719, 0, 1, 0, -0.69719, 0, 0.716886, -0.900374, 0, -10.561)
+[node name="BirchTree2" type="Node3D" parent="ProtonScatter"]
+script = ExtResource("12_sx7d4")
+proportion = 50
+path = "res://meshes/env-meshes/BirchTree_2.gltf"
 
-[node name="Plant_3" parent="." instance=ExtResource("8_nqbmp")]
-transform = Transform3D(0.514867, 0, -0.00601148, 0, 0.698954, 0, 0.00717141, 0, 0.431591, -1.49611, 0, -9.9794)
+[node name="BirchTree3" type="Node3D" parent="ProtonScatter"]
+script = ExtResource("12_sx7d4")
+proportion = 30
+path = "res://meshes/env-meshes/BirchTree_3.gltf"
+
+[node name="BirchTree4" type="Node3D" parent="ProtonScatter"]
+script = ExtResource("12_sx7d4")
+proportion = 25
+path = "res://meshes/env-meshes/BirchTree_4.gltf"
+
+[node name="BirchTree5" type="Node3D" parent="ProtonScatter"]
+script = ExtResource("12_sx7d4")
+proportion = 10
+path = "res://meshes/env-meshes/BirchTree_5.gltf"
+
+[node name="ScatterShape" type="Node3D" parent="ProtonScatter"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 3.26747, 0, 0)
+script = ExtResource("13_oy3mk")
+shape = SubResource("Resource_5hntp")

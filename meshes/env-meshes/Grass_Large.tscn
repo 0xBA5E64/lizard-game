@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdbql0bwdp82c"]
+
+[ext_resource type="PackedScene" uid="uid://2nyag7d2q31a" path="res://meshes/env-meshes/Grass_Large.glb" id="2_lqvp3"]
+
+[node name="Grass_Large" type="Node3D"]
+
+[node name="Grass_Large" parent="." instance=ExtResource("2_lqvp3")]
+
+[node name="Grass_Large2" parent="Grass_Large" index="0"]
+gi_mode = 0
+
+[editable path="Grass_Large"]

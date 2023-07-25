@@ -1,8 +1,18 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cg1q2blf3m71p"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cg1q2blf3m71p"]
 
-[ext_resource type="Texture2D" uid="uid://b3k3qd8ipqltq" path="res://meshes/env-textures/Grass.png" id="1_1bgy8"]
+[ext_resource type="Shader" uid="uid://c6e0dqud48q33" path="res://shaders/Grass.tres" id="1_4bdq1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ddrmj"]
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fvlls"]
+seamless = true
+seamless_blend_skirt = 0.49
+noise = SubResource("FastNoiseLite_ddrmj")
 
 [resource]
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("1_1bgy8")
+render_priority = 0
+shader = ExtResource("1_4bdq1")
+shader_parameter/BaseColor = Color(0.13062, 0.21, 0.0336, 1)
+shader_parameter/TipColor = Color(0.418341, 0.604068, 0, 1)
+shader_parameter/WindNoise = SubResource("NoiseTexture2D_fvlls")

@@ -28,5 +28,25 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"PalmTree_Leaves": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/PalmTree_Leaves.tres"
+},
+"PalmTree_Trunk": {
+"use_external/enabled": true,
+"use_external/path": "res://meshes/env-textures/PalmTree_Trunk.tres"
+}
+},
+"nodes": {
+"PATH:PalmTree_12": {
+"generate/physics": true,
+"physics/shape_type": 6,
+"primitive/height": 5.0,
+"primitive/position": Vector3(0, 2.5, 0),
+"primitive/radius": 0.3
+}
+}
+}
 gltf/embedded_image_handling=1
